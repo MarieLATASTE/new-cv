@@ -2,6 +2,7 @@
 
 :root{
     --current:#CC9966;
+    --brown:#23120b;
 }
 *{
     font-family: 'Rampart One', cursive;
@@ -10,11 +11,12 @@
     outline: none;border: none;
     text-decoration: none;
     text-transform: capitalize;
+    list-style: none;
     transition: all .2s linear;
 }
 *::selection{
     background: var(--current);
-    color: #23120b;
+    color: var(--brown);
 }
 html{
     font-size: 62.5%;
@@ -31,7 +33,51 @@ html::-webkit-scrollbar-thumb{
 }
 
 body{
-    background: #23120b;
+    background: var(--brown);
     overflow-x: hidden;
     color: var(--current);
+}
+header{
+    position: fixed;top: 0;left: 0;
+    height: 100%;width: 35rem;
+    display: flex;align-items: center;justify-content: center;
+    flex-flow: column;
+    background: rgba(115, 48, 12,.25);
+    z-index: 1000;
+    text-align: center;
+}
+header .user img{
+    height: 20rem;width: 20rem;
+    border-radius: 50%;
+    border:1rem solid #960213;
+    object-fit: cover;
+}
+header .user .name{
+    font-size: 3rem;
+    color: #fff8dc;
+}
+header .user .post{
+    font-size: 2rem;
+    color: #faefc6;
+}
+header .navbar{
+    padding: 1rem 3rem;
+}
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;margin: 1.5rem 0;
+    background: rgba(165, 69, 17, 0.25);
+    color: #fff8dc;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+header .navbar ul li a:hover{
+    background: var(--current);
+    color: var(--brown);
+}
+
+#menu{
+    position: fixed;top: 2rem;right: 2rem;
+    font-size: 2.5rem;
+    cursor: pointer;
 }
